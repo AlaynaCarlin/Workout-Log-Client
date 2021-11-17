@@ -9,7 +9,7 @@ const Login = (props) => {
         event.preventDefault();
         fetch("http://localhost:3000/user/login", {// sending a fetch to the endpoint determined by our server
             method: 'POST', // the method of the fetch is a POST
-            body: JSON.stringify({ user: { username: username, password: password } }), // including a body with our state  info. This has to match what the backend is expecting
+            body: JSON.stringify({ user: { username: username, passwordhash: password } }), // including a body with our state  info. This has to match what the backend is expecting
             headers: new Headers({
                 'Content-Type': 'application/json' // lets the server know what type of information we are sending it
             })
