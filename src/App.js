@@ -25,7 +25,7 @@ function App() {
   }
 
   const protectedViews = () => {
-    return (setSessionToken === localStorage.getItem('token') ? <WorkoutIndex token={sessionToken}/> : <Auth updateToken={updateToken}/>)
+    return (sessionToken === localStorage.getItem('token') ? <WorkoutIndex token={sessionToken}/> : <Auth updateToken={updateToken}/>)
   }
 
   useEffect(() => {
